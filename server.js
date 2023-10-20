@@ -5,4 +5,4 @@ app.get('/', function (req, res){
     res.send("Witaj");
 });
 
-app.listen(8080);
+app.listen(80);

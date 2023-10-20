@@ -1,4 +1,5 @@
 name: Deploy to Amazon ECS
+
 on:
   push:
     branches: [ main ]
@@ -35,7 +36,7 @@ jobs:
         id: build-image
         env:
           ECR_REGISTRY: "${{ secrets.ACCOUNT_ID}}.dkr.ecr.eu-north-1.amazonaws.com"
-          ECR_REPOSITORY: "app_repo"
+          ECR_REPOSITORY: "express_app_repo"
           IMAGE_TAG: latest
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .

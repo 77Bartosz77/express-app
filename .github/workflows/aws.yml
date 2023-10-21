@@ -9,6 +9,10 @@ on:
         description: 'The environment to deploy to'
         required: true
         default: 'production'
+        type: choice
+        options:
+          - prod
+          - stage
 env:
   AWS_REGION: eu-north-1
   ECS_CLUSTER: express_app_cluster
